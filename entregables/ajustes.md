@@ -3,13 +3,13 @@
 ## Ajuste 1
 Seccion: `Historia 17`
 Ajuste: Cambiar la redacción de la AC3 por: 
-        - Given una tarea tiene un evento asociado, When marco la tarea como `archived`, Then el evento se marca como archivado.
-Motivo: Porque esta consistente con el comportamiento de `completed`.
+        - Dada una tarea tiene un evento asociado, When marco la tarea como `archived`, Then el evento se marca como archivado.
+Motivo: Porque es consistente con el comportamiento de `completed`.
 
 ## Ajuste 2
 Seccion: `Notas / ambigüedades abiertas`
 Ajuste: En la Nota de **Orden por defecto del listado** hace referencia a la Historia 12, pero debe ser la 11
-Motivo: Porque se elimino una historia (la de la pagina de bienvenida)
+Motivo: Porque se eliminó una historia (la de la página de bienvenida)
 
 ## Ajuste 3
 Seccion: `Notas / ambigüedades abiertas`
