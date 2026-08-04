@@ -1,15 +1,15 @@
 # Respuestas
 
 ## ¿Siguen teniendo sentido las historias tal como las generaste? ¿El alcance sigue ceñido al MVP del PRD, o se coló alguna que la IA "inventó" fuera de scope?
-Si se habia colado una historia con una pantalla de bienvenida, no especificada en el MVP.
+Sí se había colado una historia con una pantalla de bienvenida, no especificada en el MVP.
 
 ## ¿Hay historias cuyos criterios de aceptación ahora ves incompletos o poco verificables?
 La historia 17 el AC3
-```
+```markdown
 ### Historia 17: Eliminación o marcado de evento al completar/borrar tarea
 3. Given archivo una tarea con evento asociado *(asumido: `archived` se trata igual que completar/borrar a efectos de sincronización; el PRD no lo distingue)*, When la archivo, Then el evento se actualiza de forma consistente con ese comportamiento.
 ```
-Esta en la seccion de `Notas / ambigüedades abiertas`. El texto `el evento se actualiza de forma consistente con ese comportamiento` que se va a hacer exactamente, cuando lo correcto es que se marque como `archived`.
+Está en la sección de `Notas / ambigüedades abiertas`. El texto `el evento se actualiza de forma consistente con ese comportamiento` que se va a hacer exactamente, cuando lo correcto es que se marque como `archived`.
 
 ## ¿Hay historias que han cambiado de naturaleza desde entonces? (porque descubriste una dependencia, porque la spec evolucionó, porque entiendes mejor el dominio).
 No, hasta el momento no.
@@ -18,11 +18,11 @@ No, hasta el momento no.
 No, tampoco.
 
 ## Al contrastar con el backlog que el mentor construyó en el directo de S4 sobre Linear: ¿qué priorizaste distinto tú? ¿Quién acertó y por qué?
-Mas que el backlog, me llamo la atención las secciones de los prompt que comento, que yo no tenia o bien estaban muy pobres:
+Más que el backlog, me llamo la atención las secciones de los prompt que comento, que yo no tenia o bien estaban muy pobres:
 
-A continuación te los describo:
+Las secciones son muy buenas, que a continuación te los describo:
 
-```
+```markdown
 ### Formato del output
 
 Formato de output esperado (ejemplo, no lo copies literal, es sólo estructural)
