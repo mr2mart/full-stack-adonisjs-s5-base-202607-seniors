@@ -13,14 +13,15 @@ Sí se había colado una historia con una pantalla de bienvenida, no especificad
 
 - ¿Hay historias cuyos criterios de aceptación ahora ves incompletos o poco verificables?
 
-La historia 17 el AC3
+La nota del AC3 de la historia 17 el AC3 esta incompleta o confusa:
 
 ```markdown
 - Historia 17: Eliminación o marcado de evento al completar/borrar tarea
 3. Given archivo una tarea con evento asociado *(asumido: `archived` se trata igual que completar/borrar a efectos de sincronización; el PRD no lo distingue)*, When la archivo, Then el evento se actualiza de forma consistente con ese comportamiento.
 ```
 
-Está en la sección de `Notas / ambigüedades abiertas`. El texto `el evento se actualiza de forma consistente con ese comportamiento` que se va a hacer exactamente, cuando lo correcto es que se marque como `archived`.
+Está en la sección de `Notas / ambigüedades abiertas`, el texto `el evento se actualiza de forma consistente con ese comportamiento`
+Sería más correcto: el evento se marca como `archived`.
 
 - ¿Hay historias que han cambiado de naturaleza desde entonces? (porque descubriste una dependencia, porque la spec evolucionó, porque entiendes mejor el dominio).
 No, hasta el momento no.
@@ -183,13 +184,13 @@ Tabla en Markdown con columnas (tipo de documentación, estado, observación, ub
 
 ### Paso 6 - Top 3
 
-- Carencias y fortalezas
+- Carencias
 
 1. **La spec de OpenSpec de `users` describe un endpoint (`GET /api/v1/users/active`) que no existe en el código.** Es la carencia más peligrosa porque no es una simple ausencia de documentación: es documentación que activamente miente. Cualquiera que planifique trabajo o integre contra la API confiando en la spec se lleva una sorpresa. Es justo el tipo de divergencia que rompe la confianza en "la spec como fuente de verdad".
 2. **No hay guía operacional ni ADRs.** El proyecto no tiene forma de desplegarse fuera de local (sin CI/CD, sin Dockerfile, sin runbooks) y las decisiones técnicas de fondo (SQLite, access tokens, scrypt) no están justificadas por escrito. Para un repo que se usa como base de referencia de un máster, esto deja a cualquiera que lo extienda sin criterio documentado de "por qué así y no de otra forma".
 3. **No hay descripción de arquitectura real ni diagrama C4**, pese a que `docs/README.md` lo anuncia como parte del plan. Lo que existe son árboles de carpetas, que describen dónde vive el código, no cómo se relacionan los componentes en ejecución (auth flow, frontend↔backend, etc.). Esto complica el onboarding de alguien que necesite entender el sistema sin leer todo el código.
 
-- Cosas que ya están bien
+- Fortalezas
 
 1. **El README raíz permite arrancar el proyecto de cero sin preguntar a nadie**: requisitos, instalación, `.env`, `generate:key`, migraciones y arranque de backend y frontend están cubiertos con comandos copiables y en orden correcto.
 2. **La spec de `authentication` está perfectamente sincronizada con el código.** Registro, login, logout y perfil coinciden exactamente entre lo que dice la spec (incluyendo status codes y forma de la respuesta) y lo que hace el controller. Es el ejemplo a seguir para el resto de specs.
@@ -198,10 +199,10 @@ Tabla en Markdown con columnas (tipo de documentación, estado, observación, ub
 ### Paso 7 - Exploración rápida de tres formatos de documentación
 
 - Diagrama C4
-Presenta una vista panorámica (el mapa completo) e ir haciendo "zoom in"
+Este formato presenta una vista panorámica (el mapa completo) e ir haciendo acercamientos hasta el nivel de código
 
 - ADR
-Muestran el porqué, la justificación y las consecuencias de cada decisión tecnológica.
+Este formato muestra el porqué, la justificación y las consecuencias de cada decisión tecnológica
 
 - Especificación OpenAPI
-Muestra los parámetros, solicitudes y las respuestas de cada punto final.
+Este formato muestra los parámetros, solicitudes y las respuestas de cada punto de la API
